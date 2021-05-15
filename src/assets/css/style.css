@@ -1,0 +1,99 @@
+:root {
+    --white: #fff;
+    --black: #262625;
+    --darker-green: #154001;
+    --dark-green: #467302;
+    --green: #84BF04;
+    --light-green: #D9F2B3;
+
+    /* --sans-serif: Arial, Helvetica, sans-serif; */
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    color: var(--white);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+    background-color: var(--darker-green);
+    font-size: 3rem;
+    text-align: center;
+    padding: 32px 16px;
+    margin: 0 0 32px 0;
+}
+
+.team-members-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.team-members-list .team-member-card {
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, .3);
+    border-radius: 4px;
+    background-color: var(--light-green);
+    width: 300px;
+    margin: 0 12px 24px;
+}
+
+.team-member-card .card-header {
+    color: var(--white);
+    border-radius: 4px 4px 0 0;
+    background-color: var(--dark-green);
+    padding: 8px;
+}
+
+.team-member-card .card-body {
+    padding: 8px;
+}
+
+.team-member-card .name {
+    margin: 0 0 8px 0;
+}
+
+.team-member-card .job-title {
+    font-size: 1.2rem;
+}
+
+.team-member-card .job-title i {
+    margin-right: 4px;
+}
+
+.team-member-card .info-list {
+    list-style: none;
+    background-color: var(--white);
+}
+
+.info-list .info-item {
+    padding: 16px 8px;
+    position: relative;
+}
+
+.info-list .info-item + .info-item::before {
+    content: '';
+    border-top: 1px solid;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    right: 8px;
+}
