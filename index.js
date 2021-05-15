@@ -217,7 +217,10 @@ const askInternInfo = () => {
 
 const getEmployeesTeam = new Promise((resolve, reject) => {
     askManagerInfo()
-        .then(askNewEmployee)
+        .then(message => {
+            console.log(message);
+            return askNewEmployee();
+        })
         .then(message => {
             console.log(message);
             resolve('\nTeam created.');
